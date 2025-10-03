@@ -23,3 +23,9 @@ jobs:
 
       - name: Lint with flake8
         run: flake8 .
+
+      - name: Install nose
+        run: pip install nose
+
+      - name: Run unit tests with nose
+        run: nosetests
