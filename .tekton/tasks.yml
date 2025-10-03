@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: cleanup
+spec:
+  steps:
+    - name: cleanup
+      image: alpine:latest
+      script: |
+        #!/bin/sh
+        echo "Performing cleanup..."
+        # Add cleanup commands here, e.g., rm -rf /workspace/tmp
